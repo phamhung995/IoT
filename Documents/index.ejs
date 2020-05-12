@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Quan Trac</title>
+<script src="jquery.js"></script>
+<script src="socket.io/socket.io.js"></script>
+
+<script>
+//Ket noi len server
+var socket = io("http://localhost:3000");
+$(document).ready(function(){
+    $("#client").click(function(){
+        socket.emit("sendData", "Hello!");
+    });
+});
+</script>
+
+</head>
+
+<body>
+    <div id="client">Click here</div>
+</body>
+</html>>
